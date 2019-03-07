@@ -2,6 +2,7 @@ $(document).ready( function() {
 	var playerScore = 0;
 	var comScore = 0;
 	var ties = 0;
+
 	$('.cr').hide();
 	$('.cp').hide();
 	$('.cs').hide();
@@ -18,7 +19,7 @@ $(document).ready( function() {
 	$('.pr').hide();
 	$('.pp').hide();
 	$('.ps').hide();
-	
+
 		game(this.id);
 	});
 
@@ -49,16 +50,15 @@ $(document).ready( function() {
 				$('.cs').show();
 				break;
 		}
-		debugger
 
 		result(comChoice, playerChoice);
 	}
-	
+
 	// generate computer choice
 	function generateComChoice() {
 		var options = [0, 1, 2];
 		option = options[Math.floor(Math.random()*options.length)];
-		return option;
+		return option.toString();
 	}
 
 	//decide the winner
@@ -82,7 +82,7 @@ $(document).ready( function() {
 		$('#player-score')
 			.html(++playerScore)
 	}
-	
+
 	function lose() {
 		$('#result')
 			.html('<h1>You LOSE</h2>')
@@ -93,7 +93,7 @@ $(document).ready( function() {
 		$('#com-score')
 			.html(++comScore)
 	}
-	
+
 	function tie() {
 		$('#result')
 			.html('<h1>TIE</h2>')
