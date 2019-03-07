@@ -8,6 +8,8 @@
 <body>
 	<header>
 	<h1>Rock Paper Scissors</h1>
+	<h1>最初 さいしょ はぐう</h1>
+	<img src="images/rps.png" alt="rock paper scissors">
 	</header>
 
 	<section class="scoreboard">
@@ -20,13 +22,26 @@
 		<div id="com-score">0</div>
 	</section>
 	
+	<section id="result">
+	</section>
+
 	<section id="play-area">
+		<button id="0">rock</button>
+		<button id="1">paper</button>
+		<button id="2">scissors</button>
 	</section>
 
 	<section id="choice">
-	</section>
-
-	<section id="result">
+		<div id="player-choice">
+			<img class="rock" src="images/rock.png" alt="rock">
+			<img class="paper" src="images/paper.png" alt="paper">
+			<img class="scissor" src="images/scissors.png" alt="cissors">
+		</div>
+		<div id="com-choice">
+			<img class="rock" src="images/rock.png" alt="rock">
+			<img class="paper" src="images/paper.png" alt="paper">
+			<img class="scissor" src="images/scissors.png" alt="cissors">
+		</div>
 	</section>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
