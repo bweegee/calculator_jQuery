@@ -2,15 +2,55 @@ $(document).ready( function() {
 	var playerScore = 0;
 	var comScore = 0;
 	var ties = 0;
+	$('.cr').hide();
+	$('.cp').hide();
+	$('.cs').hide();
+	$('.pr').hide();
+	$('.pp').hide();
+	$('.ps').hide();
+
 
 	// listen for player choice and grab ID
 	$('button').on('click', function() {
+	$('.cr').hide();
+	$('.cp').hide();
+	$('.cs').hide();
+	$('.pr').hide();
+	$('.pp').hide();
+	$('.ps').hide();
+	
 		game(this.id);
 	});
 
 	function game(id) {
 		var playerChoice = id;
 		var comChoice = generateComChoice();
+
+		switch(playerChoice) {
+			case '0':
+				$('.pr').show();
+				break;
+			case '1':
+				$('.pp').show();
+				break;
+			case '2':
+				$('.ps').show();
+				break;
+		}
+
+		switch(comChoice) {
+			case '0':
+				$('.cr').show();
+				break;
+			case '1':
+				$('.cp').show();
+				break;
+			case '2':
+				$('.cs').show();
+				break;
+		}
+		debugger
+
 		result(comChoice, playerChoice);
 	}
 	
@@ -65,5 +105,3 @@ $(document).ready( function() {
 			.html(++ties)
 	}
 });
-
-

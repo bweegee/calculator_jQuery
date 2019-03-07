@@ -40,3 +40,45 @@ header {
 	color: yellow;
 }
 
+#choice {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	position: relative;
+	margin: 15px 20px;
+	height: 200px;
+}
+
+#player-choice > img {
+	height: 150px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+#com-choice > img {
+	height: 150px;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+#result {
+	margin: auto;
+	padding: 15px;
+	width: 50%;
+	text-align: center;
+	text-size: 2rem;
+}
+
+#play-area {
+	padding:15px;
+	margin: auto;
+	text-size: 3em;
+	text-align: center;
+}
+
+button {
+	width: 300px;
+	height: 100px;
+}
+
